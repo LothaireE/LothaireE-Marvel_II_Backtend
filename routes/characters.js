@@ -12,8 +12,10 @@ router.get("/characters", async (req, res) => {
   } catch (error) {
     res.status(400).json(error.message);
   }
+});
 
-  //   res.status(200).json({ message: "characters route" });
+router.get("/characters/:characterId", async (req, res) => {
+  console.log("req.params==>", req.params);
 });
 
 module.exports = router;
